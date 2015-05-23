@@ -7,19 +7,25 @@
 <body>
   <h1>is.js テスト</h1>
   <dl>
-    <dt>1.変数が存在している（nullやundefinedでない）かどうかのチェック</dt>
+    <dt>1.[existy]変数が存在している（nullやundefinedでない）かどうかのチェック</dt>
     <dd id="isFooExist"></dd>
   </dl>
 
   <dl>
-    <dt>2.チェック結果がfalseと判定される場合にtrueを返す</dt>
+    <dt>2.[not.existy]チェック結果がfalseと判定される場合にtrueを返す</dt>
     <dd id="isFooNotExist"></dd>
   </dl>
 
   <dl>
-    <dt>3.与えられた複数の値がすべてtrueと評価される場合のみ、trueを返す</dt>
+    <dt>3.[all]与えられた複数の値がすべてtrueと評価される場合のみ、trueを返す</dt>
     <dd id="isNumber1Even"></dd>
     <dd id="isNumber2Even"></dd>
+  </dl>
+
+  <dl>
+    <dt>4.[any]与えられた複数の値のうちいずれかがtrueと評価される場合に、trueを返す</dt>
+    <dd id="isNumber1AnyEven"></dd>
+    <dd id="isNumber2AnyEven"></dd>
   </dl>
 
   <script src="js/is.min.js"></script>
