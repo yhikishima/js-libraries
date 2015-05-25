@@ -1,6 +1,7 @@
 (function() {
   var eachMethod = document.getElementById('eachMethod');
   var timeMethod = document.getElementById('timeMethod');
+  var keysMethod = document.getElementById('keysMethod');
 
   /*
   * 1.[_.each]ES5のforEachと同じ機能を持つイテレータメソッド
@@ -31,6 +32,22 @@
   _.times(3, function(n) {
     var node = document.createTextNode(n + ',');
     timeMethod.appendChild(node);
+  });
+
+
+  /*
+  * 3.[_.keys]オブジェクトのキーを配列にして返す。
+  */
+
+  var keys = {
+    name: '鍵のキー',
+    category: '鍵',
+    detail: ['家', '車']
+  };
+
+  _.each(_.keys(keys), function(n) {
+    var node = document.createTextNode(n + ', ');
+    keysMethod.appendChild(node);
   });
 
 
