@@ -2,6 +2,9 @@
   var eachMethod = document.getElementById('eachMethod');
   var timeMethod = document.getElementById('timeMethod');
   var keysMethod = document.getElementById('keysMethod');
+  var extendMethod = document.getElementById('extendMethod');
+  var templateMethod = document.getElementById('templateMethod');
+
 
   /*
   * 1.[_.each]ES5のforEachと同じ機能を持つイテレータメソッド
@@ -49,6 +52,26 @@
     var node = document.createTextNode(n + ', ');
     keysMethod.appendChild(node);
   });
+
+  /*
+  * 4.[_.extend]1つ目のオブジェクトに対して2つ目以降のオブジェクトのプロパティをコピーするメソッド
+  */
+
+  var breed = { breed: 'ミニチュアダックスフント' };
+  var age = { age: 6 };
+  var dog = _.extend({}, breed, age);
+
+  extendMethod.innerHTML = '種類：'+dog.breed+', 年齢：'+dog.age;
+
+  /*
+  * 5.[_.template]テンプレートメソッド
+  */
+
+  var template = _.template('<p><%- value %></p>');
+  var t = template({ value: 'This is value.' });
+
+  templateMethod.innerHTML = t;
+
 
 
 })();
