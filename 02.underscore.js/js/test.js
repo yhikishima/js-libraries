@@ -4,6 +4,8 @@
   var keysMethod = document.getElementById('keysMethod');
   var extendMethod = document.getElementById('extendMethod');
   var templateMethod = document.getElementById('templateMethod');
+  var bindMethod = document.getElementById('bindMethod');
+  var deferMethod = document.getElementById('deferMethod');
 
 
   /*
@@ -72,6 +74,21 @@
 
   templateMethod.innerHTML = t;
 
+  /*
+  * 6.[_.bind]指定した関数にObjectを束縛したり、部分適用を実現できる
+  */
+
+  var func = function(greeting){ return greeting + ': ' + this.name };
+  func = _.bind(func, {name : 'moe'}, 'hi');
+  bindMethod.innerHTML = func();
+
+  /*
+  * 7.[_.defer]実行するクロージャー内のコールスタックが空になった時点で実行する関数を予約できる
+  */
+
+  _.defer(function() {
+    deferMethod.innerHTML = 'done!';
+  });
 
 
 })();
