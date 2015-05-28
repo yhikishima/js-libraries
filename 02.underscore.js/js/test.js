@@ -6,6 +6,7 @@
   var templateMethod = document.getElementById('templateMethod');
   var bindMethod = document.getElementById('bindMethod');
   var deferMethod = document.getElementById('deferMethod');
+  var throttleMethod = document.getElementById('throttleMethod');
 
 
   /*
@@ -89,6 +90,19 @@
   _.defer(function() {
     deferMethod.innerHTML = 'done!';
   });
+
+  /*
+  * 8.[_.throttle]waitで指定した時間内にfuncを一度しか実行しないようにできる
+  */
+  var getDistance = _.throttle(function(s) {
+    throttleMethod.innerHTML = s;
+  }, 100);
+
+  window.onscroll = function() {
+    var s = document.body.scrollTop;
+    getDistance(s);
+  };
+
 
 
 })();
