@@ -7,7 +7,7 @@
   var bindMethod = document.getElementById('bindMethod');
   var deferMethod = document.getElementById('deferMethod');
   var throttleMethod = document.getElementById('throttleMethod');
-
+  var debounceMethod = document.getElementById('debounceMethod');
 
   /*
   * 1.[_.each]ES5のforEachと同じ機能を持つイテレータメソッド
@@ -103,6 +103,22 @@
     getDistance(s);
   };
 
+  /*
+  * 9.[_.debounce]_.debounce()は自身を実行後、waitで指定した時間内に、再び自身が呼ばれなければ、指定した時間が経った後、functionに登録した処理を実行する
+  */
+
+  var debounced = _.debounce(function(s) {
+    scrollEve(s)
+  },  200);
+
+  function scrollEve(t) {
+    debounceMethod.innerHTML = 'scroll：' + t
+  }
+
+  window.onscroll = function() {
+    var t = document.body.scrollTop;
+    debounced(t);
+  };
 
 
 })();
