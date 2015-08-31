@@ -1,0 +1,135 @@
+/*
+ * main.css
+ */
+
+@charset "UTF-8";
+
+.ly-header {
+  width: 100%;
+  background: #51A2DB;
+  color: #ffffff;
+  margin: 0 auto 10px;
+  padding: 20px 0;
+}
+
+.ly-headerInner {
+  width: 980px;
+  margin: 0 auto;
+}
+
+.ly-main {
+  width: 980px;
+  min-height: 1000px;
+  color: #0D72B9;
+  margin: 0 auto 10px;
+}
+
+.ly-mainImg {
+  width: 980px;
+  height: 250px;
+  background: #77B9E8;
+  margin: 0 auto 10px;
+  color: #0D72B9;
+}
+
+.ly-mainContents {
+  float: left;
+  background: #77B9E8;
+  width: 710px;
+  height: 1000px;
+  border-right: 1px solid #A9D5F4;
+}
+
+.ly-mainSideContents {
+  float: right;
+  background: #77B9E8;
+  width: 255px;
+  height: 500px;
+}
+
+.ly-footer {
+  width: 100%;
+  background: #A9D5F4;
+  color: #0D72B9;
+  margin: 0 auto;
+}
+
+.ly-footerInner {
+  width: 980px;
+  padding: 20px 0;
+  margin: 0 auto;
+}
+
+
+li,
+ul {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+.js-tab {
+    width: 800px;
+    text-align: center;
+    margin-top: 25px;
+}
+#js-tabTrigger > li,
+#js-tabTrigger2 > li {
+    float: left;
+    width: 100px;
+    margin-right: 3px;
+    background-color: #dddddd;
+    cursor: pointer;
+}
+#js-tabTrigger li,
+#js-tabTrigger2 li{
+    height: 50px;
+    line-height: 50px;
+}
+#js-tabTrigger li:hover,
+#js-tabTrigger li:active,
+#js-tabTrigger2 li:hover,
+#js-tabTrigger2 li:active {
+    opacity: .8;
+}
+#js-tabTrigger > li.current:hover,
+#js-tabTrigger > li.current:active,
+#js-tabTrigger2 > li.current:hover,
+#js-tabTrigger2 > li.current:active {
+    opacity: 1;
+}
+#js-tabTrigger > li.current,
+#js-tabTrigger2 > li.current {
+    background-color: #eeeeee;
+}
+#js-tabTrigger a,
+#js-tabTrigger2 a {
+    display: block;
+}
+
+#js-tabTarget,
+#js-tabTarget2 {
+    overflow: hidden;
+    width: 600px;
+    height: 400px;
+}
+#js-tabTarget > li,
+#js-tabTarget2 > li {
+    display: none;
+    width: 600px;
+    background-color: #eeeeee;
+}
+#js-tabTarget li,
+#js-tabTarget2 li {
+    height: 400px;
+    line-height: 400px;
+}
+#js-tabTarget > li.current,
+#js-tabTarget2 > li.current {
+    display: block;
+    pointer-events: none;
+}
+#js-tabTarget > li.hide,
+#js-tabTarget2 > li.hide {
+    display: none !important;
+}
