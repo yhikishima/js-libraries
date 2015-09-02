@@ -2,9 +2,9 @@
  * main.css
  */
 
-@charset "UTF-8";
+ @charset "UTF-8";
 
-.ly-header {
+ .ly-header {
   width: 100%;
   background: #51A2DB;
   color: #ffffff;
@@ -63,73 +63,57 @@
 
 li,
 ul {
-    margin: 0;
-    padding: 0;
-    text-decoration: none;
-    list-style: none;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
 }
 .js-tab {
-    width: 800px;
-    text-align: center;
-    margin-top: 25px;
+  width: 800px;
+  text-align: center;
+  margin-top: 25px;
 }
-#js-tabTrigger > li,
-#js-tabTrigger2 > li {
-    float: left;
-    width: 100px;
-    margin-right: 3px;
-    background-color: #dddddd;
-    cursor: pointer;
+.ly-tabTrigger > li {
+  float: left;
+  width: 100px;
+  margin-right: 3px;
+  background-color: #dddddd;
+  cursor: pointer;
 }
-#js-tabTrigger li,
-#js-tabTrigger2 li{
-    height: 50px;
-    line-height: 50px;
+.ly-tabTrigger li {
+  height: 50px;
+  line-height: 50px;
 }
-#js-tabTrigger li:hover,
-#js-tabTrigger li:active,
-#js-tabTrigger2 li:hover,
-#js-tabTrigger2 li:active {
-    opacity: .8;
+.ly-tabTrigger li:hover,
+.ly-tabTrigger li:active {
+  opacity: .8;
 }
-#js-tabTrigger > li.current:hover,
-#js-tabTrigger > li.current:active,
-#js-tabTrigger2 > li.current:hover,
-#js-tabTrigger2 > li.current:active {
-    opacity: 1;
+.ly-tabTrigger > li.current:hover,
+.ly-tabTrigger > li.current:active {
+  opacity: 1;
 }
-#js-tabTrigger > li.current,
-#js-tabTrigger2 > li.current {
-    background-color: #eeeeee;
+.ly-tabTrigger > li.current {
+  background-color: #eeeeee;
 }
-#js-tabTrigger a,
-#js-tabTrigger2 a {
-    display: block;
+.ly-tabTrigger a {
+  display: block;
 }
 
-#js-tabTarget,
-#js-tabTarget2 {
-    overflow: hidden;
-    width: 600px;
-    height: 400px;
+.ly-tabTarget {
+  overflow: hidden;
+  width: 600px;
+  height: 400px;
 }
-#js-tabTarget > li,
-#js-tabTarget2 > li {
-    display: none;
-    width: 600px;
-    background-color: #eeeeee;
+.ly-tabTarget > li {
+  display: none;
+  width: 600px;
+  background-color: #eeeeee;
 }
-#js-tabTarget li,
-#js-tabTarget2 li {
-    height: 400px;
-    line-height: 400px;
+.ly-tabTarget li {
+  height: 400px;
+  line-height: 400px;
 }
-#js-tabTarget > li.current,
-#js-tabTarget2 > li.current {
-    display: block;
-    pointer-events: none;
-}
-#js-tabTarget > li.hide,
-#js-tabTarget2 > li.hide {
-    display: none !important;
+.ly-tabTarget > li.current {
+  display: block;
+  pointer-events: none;
 }
