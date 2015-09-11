@@ -22,6 +22,6 @@ var LIB = {};
   LIB.Accordion({
     trigger: $accordion.find('.title'),
     target:  $accordion.find('.contents'),
-    speed: 200
+    speed: 100
   });
 })();
